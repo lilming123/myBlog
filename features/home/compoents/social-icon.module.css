@@ -1,0 +1,8 @@
+.social_icon {
+  /* Duration: 0.2s, easing: ease-in-out */
+  transition: transform 0.2s ease-in-out;  /* :contentReference[oaicite:0]{index=0} */
+}
+
+.social_icon:hover {
+  transform: scale(1.1);                    /* :contentReference[oaicite:1]{index=1} */
+}
