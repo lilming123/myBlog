@@ -132,7 +132,7 @@ build:
 install:
 	@echo "                                                                                "
 	@echo "📦 安装依赖包...                                                                 "
-	npm install
+	yarn
 	@echo "                                                                                "
 	@echo "✅ 依赖安装完成!                                                                 "
 	@echo "                                                                                "
