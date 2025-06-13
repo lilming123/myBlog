@@ -44,7 +44,7 @@ export default function Page() {
             Hi~ 我是一名前端开发工程师，你可以叫我{NICKNAME}
           </p>
           <p>
-            25届杭电，先后在字节和小米实习，春招拿到了大厂SP，目前在携程工作，喜欢 Coding 、hiphop、打游戏（炉石传说和绝区零）
+            25届杭电，先后在字节和小米实习，目前在携程工作，喜欢 Coding 、hiphop、打游戏（炉石传说和绝区零）
           </p>
         </div>
         
