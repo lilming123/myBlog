@@ -6,7 +6,6 @@
 
 # 应用配置
 APP_NAME := my-next-app
-GIT_BRANCH := main
 FRONTEND_PORT := 3030
 # 网站地址
 SITE_URL := https://www.lilming.top/
@@ -140,8 +139,8 @@ install:
 
 pull:
 	@echo "                                                                                "
-	@echo "🌐 从 $(GIT_REMOTE)/$(GIT_BRANCH) 拉取代码...                                    "
-	git pull $(GIT_REMOTE) $(GIT_BRANCH)
+	@echo "🌐 正在拉取代码...                                    "
+	git pull
 	@echo "                                                                                "
 	@echo "✅ 代码更新完成!                                                                 "
 	@echo "                                                                                "
