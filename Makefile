@@ -19,7 +19,7 @@ MYSQL_PORT := 3306
 # PHONY 目标声明
 # ---------------------------
 .PHONY: help deploy redeploy first-deploy frontend-redeploy \
-        dev build start restart install pull \
+        dev build start restart stop install pull \
         backend backend-stop backend-logs \
         clean check-app
 
@@ -113,13 +113,19 @@ start:
 	pm2 start npm --name "$(APP_NAME)" -- run start -- -p $(FRONTEND_PORT)
 
 restart:
+    stop
 	@echo "                                                                                "
 	@echo "🔄 重启生产服务器...                                                             "
-	pm2 restart $(APP_NAME) --update-env
+    start
 	@echo "                                                                                "
 	@echo "✅ 已重启 [$(APP_NAME)]                                                          "
 	@echo "  访问: $(SITE_URL)                                        "
 	@echo "                                                                                "
+
+stop:
+	@echo "                                                                                "
+	@echo "🛑 停止生产服务器...                                                             "
+	pm2 stop $(APP_NAME)
 
 build:
 	@echo "                                                                                "

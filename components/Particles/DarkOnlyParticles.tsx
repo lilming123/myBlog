@@ -11,12 +11,13 @@ export function DarkOnlyParticles() {
     <div className="fixed inset-0 z-1">
       <Particles
         particleColors={['#ffffff', '#ffffff']}
-        particleCount={100}
-        particleSpread={10}
+        particleCount={200}
+        particleSpread={20}
         speed={0.1}
-        particleBaseSize={100}
-        moveParticlesOnHover={true}
+        particleBaseSize={150}
+        moveParticlesOnHover={false}
         disableRotation={false}
+        sizeRandomness={0.8}
         cameraDistance={20}
       />
     </div>
