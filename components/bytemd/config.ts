@@ -12,6 +12,7 @@ import { common } from "lowlight";
 import asciidoc from "highlight.js/lib/languages/asciidoc";
 import dart from "highlight.js/lib/languages/dart";
 import nginx from "highlight.js/lib/languages/nginx";
+import mermaid from '@bytemd/plugin-mermaid'
 
 import { headingPlugin, prettyLinkPlugin } from "./plugins";
 
@@ -36,12 +37,29 @@ export const plugins = [
   }),
   prettyLinkPlugin(),
   headingPlugin(),
+  mermaid( {
+    theme: "dark"
+  }), 
 ];
 
 export const sanitize: EditorProps["sanitize"] = (schema) => {
-  const customerSchema = merge(schema, {
-    tagNames: ["iframe"],
+  const customerSchema = merge({}, schema, {
+    tagNames: [
+      ...schema.tagNames, // 保留原始的 Markdown 标签
+      "iframe",
+      "div",
+      "span",
+      "svg",
+      "path",
+      "g",
+      "line",
+      "rect",
+      "circle",
+      "text",
+      "marker",
+    ],
     attributes: {
+      ...schema.attributes,
       iframe: [
         "src",
         "style",
@@ -54,8 +72,21 @@ export const sanitize: EditorProps["sanitize"] = (schema) => {
         "framespacing",
         "allowfullscreen",
       ],
+      div: ["class", "style"],
+      span: ["class", "style"],
+      svg: ["width", "height", "viewBox", "xmlns", "fill", "stroke", "style", "class"],
+      path: ["d", "fill", "stroke"],
+      g: ["transform", "fill"],
+      line: ["x1", "y1", "x2", "y2", "stroke"],
+      rect: ["x", "y", "width", "height", "rx", "ry", "fill", "stroke"],
+      circle: ["cx", "cy", "r", "fill", "stroke"],
+      text: ["x", "y", "fill", "font-size", "text-anchor", "dominant-baseline"],
+      marker: ["id", "refX", "refY", "markerWidth", "markerHeight", "orient"],
     },
-  } as typeof schema);
-
+  });
+  
   return customerSchema;
 };
+
+
+
