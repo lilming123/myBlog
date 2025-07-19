@@ -1,7 +1,3 @@
-import Link from "next/link";
-
-import { Button } from "@/components/ui/button";
-
 import {
   IconSkillCSS,
   IconSkillHTML,
@@ -19,7 +15,6 @@ import {
 } from "@/components/icons";
 
 import { NICKNAME } from "@/constants";
-import { socialMediaList } from "@/features/home";
 
 export const revalidate = 60;
 
@@ -145,15 +140,15 @@ export default function Page() {
           <h2>联系我</h2>
           <p>你可以通过👇下面任意一种方式联系我</p>
           <ul className="!mb-0 flex !list-none items-center space-x-4 !pl-0">
-            {socialMediaList.map((el) => (
-              <li key={el.link}>
-                <Button asChild variant="outline" size="icon">
-                  <Link href={el.link} target="_blank">
-                    {el.icon}
-                  </Link>
-                </Button>
-              </li>
-            ))}
+           {/*{socialMediaList.map((el) => (*/}
+           {/*   <li key={el.link}>*/}
+           {/*     <Button asChild variant="outline" size="icon">*/}
+           {/*       <Link href={el.link} target="_blank">*/}
+           {/*         {el.icon}*/}
+           {/*       </Link>*/}
+           {/*     </Button>*/}
+           {/*   </li>*/}
+           {/* ))}*/}
           </ul>
         </div>
       </section>

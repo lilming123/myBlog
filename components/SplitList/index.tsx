@@ -19,7 +19,7 @@ import {
 
 
 
-import { SplitItem } from "@/features/home";
+import { SplitItem } from "@/features/home/components";
 
 
 // 通过 as const 获取精确的键名类型

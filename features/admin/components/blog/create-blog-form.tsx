@@ -107,6 +107,9 @@ export const CreateBlogForm = () => {
                     <Button type="button" onClick={handleFormatSlug}>
                       格式化
                     </Button>
+                    <Button type={"button"} onClick={createSlugByDate}>
+                      按当前日期生成
+                    </Button>
                   </div>
                 </FormControl>
                 <FormMessage />
@@ -279,5 +282,12 @@ export const CreateBlogForm = () => {
       const formatted = toSlug(tmp);
       form.setValue("slug", formatted);
     }
+  }
+  
+  function createSlugByDate() {
+    const date = new Date();
+    const formattedDate = date.toISOString().slice(0, 10);
+    const formattedSlug = toSlug(formattedDate);
+    form.setValue("slug", formattedSlug);
   }
 };

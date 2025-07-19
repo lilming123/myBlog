@@ -1,11 +1,17 @@
 'use client'
 import { useTheme } from 'next-themes'
-import Particles from "@/components/Particles/index";
+import { useEffect, useState } from 'react'
+import Particles from "@/components/Particles/index"
 
 export function DarkOnlyParticles() {
   const { resolvedTheme } = useTheme()
+  const [mounted, setMounted] = useState(false)
   
-  if (resolvedTheme !== 'dark') return null
+  useEffect(() => {
+    setMounted(true)
+  }, [])
+  
+  if (!mounted || resolvedTheme !== 'dark') return null
   
   return (
     <div className="fixed inset-0 z-1">

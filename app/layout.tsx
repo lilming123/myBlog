@@ -19,8 +19,8 @@ import { NICKNAME, SLOGAN, WEBSITE } from "@/constants";
 import { sansFont, serifFont } from "@/lib/fonts";
 import "@/styles/global.css";
 import { isProduction } from "@/utils";
-import {AccentColorStyleInjector} from "@/components/ui/AccentColorStyleInjector";
 import {DarkOnlyParticles} from "@/components/Particles/DarkOnlyParticles";
+import {AccentColorStyleInjectorClientWrapper} from "@/components/ui/AccentColorStyleInjectorClientWrapper";
 
 export const metadata: Metadata = {
   title: {
@@ -35,7 +35,7 @@ export default async function RootLayout({ children }: React.PropsWithChildren) 
   return (
     <html suppressHydrationWarning lang="zh-CN" className={'noise min-h-full'}>
     <head>
-      <AccentColorStyleInjector/>
+      <AccentColorStyleInjectorClientWrapper/>
       <link
         rel="apple-touch-icon"
         sizes="180x180"

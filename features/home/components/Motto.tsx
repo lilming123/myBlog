@@ -3,9 +3,9 @@
 import { SOCIAL_MEDIA_MAP } from "@/constants";
 import { motion } from 'framer-motion';
 import { useEffect, useState } from 'react';
-import {SocialIcon} from "@/features/home/compoents/SocialIcon";
+import {SocialIcon} from "@/features/home/components/SocialIcon";
 
-export const SocialMediaList = () => {
+export const Motto = () => {
   // 使用状态控制动画准备就绪
   const [isReady, setIsReady] = useState(false);
   
@@ -15,19 +15,14 @@ export const SocialMediaList = () => {
   }, []);
   
   return (
-    <ul className="center mx-[60px] mt-4 flex flex-wrap gap-6 lg:mx-auto lg:mt-14 lg:justify-start lg:gap-4">
-      {Object.entries(SOCIAL_MEDIA_MAP).map(([type, href], index) => {
-        if (!href) return null;
-        
-        return (
-          <motion.li
-            key={type}
+    <div className="text-xl text-stone-600 dark:text-stone-300 nAtext-center ">
+          <motion.p
             initial={{ y: 50, opacity: 0 }}
             animate={isReady ? {
               y: 0,
               opacity: 1,
               transition: {
-                delay: index * 0.1 + 1.8, // 更直观的时间单位（秒）
+                delay:  1.8, // 更直观的时间单位（秒）
                 type: "spring",
                 stiffness: 120,
                 damping: 12
@@ -35,10 +30,8 @@ export const SocialMediaList = () => {
             } : undefined}
             className="inline-block"
           >
-            <SocialIcon href={href} type={type} />
-          </motion.li>
-        );
-      })}
-    </ul>
+            “🚀You can call me lilming. A software engineer. A lifelong learner. A dreamer.”
+          </motion.p>
+    </div>
   );
 };

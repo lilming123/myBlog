@@ -1,35 +1,14 @@
 import Image from "next/image";
-import Link from "next/link";
 
-import { motion } from "framer-motion";
-
-import { Button, buttonVariants } from "@/components/ui/button";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-import { ShinyButton } from "@/components/ShinyButton";
-import SplitList from "@/components/SplitList";
 import SplitText from "@/components/SplitText";
-import { BottomToUpTransitionView } from "@/components/transition";
 
-import { NICKNAME, PATHS, SOCIAL_MEDIA_MAP } from "@/constants";
-import { TypeIntro } from "@/features/home";
-import { Motto } from "@/features/home/compoents/Motto";
-import { SocialIcon } from "@/features/home/compoents/SocialIcon";
-import { SocialMediaList } from "@/features/home/compoents/SocialMediaList";
+import { NICKNAME } from "@/constants";
+import { EnterButtons } from "@/features/home/components/EnterButtons";
+import { Motto } from "@/features/home/components/Motto";
+import { SocialMediaList } from "@/features/home/components/SocialMediaList";
 import { cn } from "@/lib/utils";
 
-import { socialMediaList } from "./social-media";
-import {EnterButtons} from "@/features/home/compoents/EnterButtons";
-
 export const HeroSection = () => {
-  let delay = 0;
-
-  // 每次调用，增加延时
-  const getDelay = () => (delay += 500);
 
   return (
     <div

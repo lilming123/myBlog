@@ -28,7 +28,7 @@ const defaultAccentColor = { light: accentColorLight, dark: accentColorDark }
 
 const lightBg = 'rgb(250, 250, 250)'
 const darkBg = 'rgb(0, 2, 18)'
-export async function AccentColorStyleInjector({
+export async function AccentColorStyleInjectorCore({
                                                  color,
                                                }: {
   color?: {
