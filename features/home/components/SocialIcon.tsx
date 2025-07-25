@@ -186,29 +186,6 @@ export const SocialIcon = memo((props: SocialIconProps) => {
     </Tooltip>
     </TooltipProvider>
 
-    // <FloatPopover
-    //   type="tooltip"
-    //   triggerElement={
-    //     <MotionButtonBase
-    //       className="center flex aspect-square size-10 rounded-full text-2xl text-white"
-    //       style={{
-    //         background: iconBg,
-    //         transform: 'none'
-    //       }}
-    //     >
-    //       <a
-    //         target="_blank"
-    //         href={href ?? hrefFn(id)}
-    //         className="center flex"
-    //         rel="noreferrer"
-    //       >
-    //         {Icon}
-    //       </a>
-    //     </MotionButtonBase>
-    //   }
-    // >
-    //   {name}
-    // </FloatPopover>
   );
 });
 SocialIcon.displayName = "SocialIcon";

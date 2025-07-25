@@ -79,6 +79,7 @@ export const Navbar = () => {
                 "hover:font-semibold hover:text-primary ",
                 pathname === el.link && "font-semibold text-primary",
               )}
+              prefetch={true}
             >
               {el.label}
             </Link>

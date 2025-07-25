@@ -14,7 +14,8 @@ import {
   IconSkillTypeScript,
 } from "@/components/icons";
 
-import { NICKNAME } from "@/constants";
+import {NICKNAME, SOCIAL_MEDIA_MAP} from "@/constants";
+import {SocialIcon} from "@/features/home/components/SocialIcon";
 
 export const revalidate = 60;
 
@@ -139,16 +140,17 @@ export default function Page() {
         >
           <h2>联系我</h2>
           <p>你可以通过👇下面任意一种方式联系我</p>
-          <ul className="!mb-0 flex !list-none items-center space-x-4 !pl-0">
-           {/*{socialMediaList.map((el) => (*/}
-           {/*   <li key={el.link}>*/}
-           {/*     <Button asChild variant="outline" size="icon">*/}
-           {/*       <Link href={el.link} target="_blank">*/}
-           {/*         {el.icon}*/}
-           {/*       </Link>*/}
-           {/*     </Button>*/}
-           {/*   </li>*/}
-           {/* ))}*/}
+          <ul className="!mb-0 flex !list-none items-center gap-x-4 !pl-0 flex-wrap	">
+            {
+              Object.entries(SOCIAL_MEDIA_MAP).map(([type, href], index)=>{
+                if (!href) return null;
+                return (
+                  <li key={index}>
+                    <SocialIcon type={type} href={href} />
+                  </li>
+                )
+              })
+            }
           </ul>
         </div>
       </section>
