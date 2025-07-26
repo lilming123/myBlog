@@ -40,7 +40,7 @@ export default function Page() {
             Hi~ 我是一名前端开发工程师，你可以叫我{NICKNAME}
           </p>
           <p>
-            25届杭电，先后在字节和小米实习，目前在携程工作，喜欢 Coding 、hiphop、打游戏（炉石传说和绝区零）
+            杭州电子科技大学25届菜鸡，先后在字节和小米实习，目前在携程工作，喜欢 Coding 、hiphop、打游戏
           </p>
         </div>
         
@@ -80,7 +80,7 @@ export default function Page() {
                 <IconSkillReactDark className="mx-1 translate-y-0.5 dark:hidden"/>
                 <IconSkillReactLight className="mx-1 hidden translate-y-0.5 dark:inline-block"/>
               </>
-              React &
+              React/React&nbsp;Native和
               <>
                 <IconSkillNextjsDark className="mx-1 translate-y-0.5 dark:hidden"/>
                 <IconSkillNextjsLight className="mx-1 hidden translate-y-0.5 dark:inline-block"/>
@@ -128,7 +128,7 @@ export default function Page() {
             animationDelay: `${getDelay()}ms`,
           }}
         >
-          <h3>太懒了，这几天都在旅游，后面想到什么再补充吧</h3>
+          <h3>后面想到什么再补充吧</h3>
         </div>
         
 

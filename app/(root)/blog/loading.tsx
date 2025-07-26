@@ -1,16 +1,16 @@
 // app/loading.tsx
-import { Spinner } from '@/components/ui/spinner';
+
+import Loader from "@/components/loader";
 
 export default function Loading() {
   return (
-    <div className="fixed inset-0 z-50 flex items-center justify-center bg-white/80 backdrop-blur-sm transition-opacity duration-300">
+    <div className="fixed inset-0 z-50 flex items-center justify-center duration-300">
       <div className="flex flex-col items-center gap-4">
         <div className="relative">
-          <Spinner className="h-16 w-16 text-blue-600" />
-          <div className="absolute inset-0 rounded-full border-4 border-blue-200 animate-ping"></div>
+          <Loader/>
         </div>
-        <p className="text-lg font-medium text-gray-700 animate-pulse">
-          加载中，请稍候...
+        <p className="text-lg font-medium dark:text-amber-50 animate-pulse">
+          稍安勿躁，坐和放宽
         </p>
       </div>
     </div>
