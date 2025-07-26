@@ -149,7 +149,6 @@ export const SocialIcon = memo((props: SocialIconProps) => {
     const [name, Icon, iconBg, hrefFn] = (iconSet as any)[type as any] || [];
     return [name, Icon, iconBg, hrefFn];
   }, [type]);
-  console.log(name);
 
   if (!name) return null;
 
@@ -158,7 +157,7 @@ export const SocialIcon = memo((props: SocialIconProps) => {
       <Tooltip>
       <TooltipTrigger asChild={true}>
         <MotionButtonBase
-          className={`center flex aspect-square size-10 rounded-full text-2xl text-white transition-transform duration-300 ${styles.social_icon}`}
+          className={`center flex aspect-square size-10 rounded-full text-2xl transition-transform duration-300 ${styles.social_icon}`}
           style={{
             background: iconBg,
           }}
@@ -166,7 +165,7 @@ export const SocialIcon = memo((props: SocialIconProps) => {
           <a
             target="_blank"
             href={href ?? hrefFn(id)}
-            className="center flex"
+            className="center flex text-white"
             rel="noreferrer"
           >
             {Icon}

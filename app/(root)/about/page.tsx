@@ -40,7 +40,7 @@ export default function Page() {
             Hi~ 我是一名前端开发工程师，你可以叫我{NICKNAME}
           </p>
           <p>
-            杭州电子科技大学25届菜鸡，先后在字节和小米实习，目前在携程工作，喜欢 Coding 、hiphop、打游戏
+            杭州电子科技大学25届菜鸡，先后在字节和小米实习，毕业之后加入携程，喜欢 Coding、hiphop、国际象棋。
           </p>
         </div>
         
